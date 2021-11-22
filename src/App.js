@@ -1,18 +1,19 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PageTemplate from "./pages/PageTemplate";
-import Users from "./pages/Users";
+import { TextField } from "@material-ui/core";
+import Button from "@material-ui/core/Button";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route>
-          <PageTemplate title="Users">
-            <Users />
-          </PageTemplate>
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <TextField
+        required
+        id='standard-required'
+        label='Required'
+        defaultValue='Hello World'
+      />
+      <Button variant='contained' color='primary'>
+        Hello World
+      </Button>
+    </>
   );
 }
 
