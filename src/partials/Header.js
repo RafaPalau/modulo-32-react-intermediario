@@ -12,7 +12,7 @@ import useStyles from "./Header.style";
 const Header = () => {
   const classes = useStyles();
   return (
-    <AppBar position='static'>
+    <AppBar position='static' >
       <Toolbar>
         <IconButton size='large' edge='start' color='inherit' aria-label='menu'>
           <MenuIcon />
