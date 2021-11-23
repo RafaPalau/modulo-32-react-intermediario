@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Page = ({ title, Component }) => {
-  const classes = useStyles();
+  // const classes = useStyles();
   return (
     <>
       <Typography variant='h3'>{title}</Typography>
