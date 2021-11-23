@@ -7,6 +7,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 import { Favorite, Share } from "@material-ui/icons";
+import classNames from "classnames";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
   avatar: {},
 }));
 
-const CustomerCard = ({ name, lastname, email, avatar }) => {
+const CustomerCard = ({ name, lastname, email, avatar, className }) => {
   const classes = useStyles({ name, lastname, email, avatar });
 
   return (
-    <Card className={classes.root}>
+    <Card className={classNames(className, classes.root)}>
       <CardHeader
         avatar={
           <Avatar className={classes.avatar} aria-label='recipe' src={avatar}>
