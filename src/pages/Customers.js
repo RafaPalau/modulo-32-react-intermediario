@@ -28,7 +28,6 @@ const Customers = () => {
 
   return (
     <>
-      <h1>Customers</h1>
       <Grid container>
         {customers.map((item) => (
           <Grid item xs={12} md={4}>
