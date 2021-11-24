@@ -16,7 +16,7 @@ const App = () => {
           <Route path='/'>
             <TemplatePage title='Página Inicial' Component={Home} />
           </Route>
-        </Switch>
+              </Switch>
       </TemplateDefault>
     </Router>
   );
