@@ -38,7 +38,7 @@ const Customers = () => {
               avatar={item.avatar}
               className={classes.card}
             />
-          </Grid>
+            </Grid>
         ))}
       </Grid>
     </>
