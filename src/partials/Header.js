@@ -16,7 +16,7 @@ import { useState } from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import PersonAddAltIcon from "@material-ui/icons/PersonAdd";
-
+import PersonRoundedIcon from "@material-ui/icons/PersonRounded";
 import useStyles from "./Header.style";
 
 const Header = () => {
@@ -59,6 +59,12 @@ const Header = () => {
               <HomeIcon />
             </ListItemIcon>
             <ListItemText>Home</ListItemText>
+          </ListItem>
+          <ListItem button onClick={() => handleMenuClick("/customers")}>
+            <ListItemIcon>
+              <PersonRoundedIcon />
+            </ListItemIcon>
+            <ListItemText>Lista de Clientes</ListItemText>
           </ListItem>
           <ListItem button onClick={() => handleMenuClick("/customers")}>
             <ListItemIcon>

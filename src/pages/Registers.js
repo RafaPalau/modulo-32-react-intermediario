@@ -13,7 +13,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Register = () => {
-  return <></>;
+  return (
+    <>
+    
+    </>
+  );
 };
 
 export default Register;
