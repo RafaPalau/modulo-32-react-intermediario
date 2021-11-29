@@ -12,7 +12,6 @@ import classNames from "classnames";
 import ModalConfirm from "./ModalConfirm";
 import { useState } from "react";
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -28,6 +27,7 @@ const CustomerCard = ({
   avatar,
   className,
   onRemoveCustomer,
+  onEditCustomer,
 }) => {
   const classes = useStyles();
   const [openModal, setOpenModal] = useState(false);
@@ -44,6 +44,10 @@ const CustomerCard = ({
   const handleRemoveCustomer = () => {
     handleToogleOpenModal();
   };
+
+  const handleEditCustomer = (id) => {
+    onEditCustomer(id);
+  };
   return (
     <>
       <Card className={classNames(className, classes.root)}>
@@ -58,12 +62,15 @@ const CustomerCard = ({
         />
 
         <CardActions disableSpacing>
-          <IconButton aria-label='Editar cadastro'>
+          <IconButton
+            aria-label='Editar cadastro'
+            onClick={() => handleEditCustomer(id)}
+          >
             <EditIcon />
           </IconButton>
           <IconButton
-            aria-label='Remover cadastro'
-            onClick={() => handleRemoveCustomer()}
+            aria-label='remover cadastro'
+            onClick={handleRemoveCustomer}
           >
             <DeleteIcon />
           </IconButton>
